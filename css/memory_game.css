@@ -1,0 +1,223 @@
+* {
+    background-color: #fdf4e2e9;
+    font-family: 'Courier New', Courier, monospace;
+}
+html {
+    scroll-behavior: smooth;
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0deg); 
+    }
+    to {
+      transform: rotate(360deg); 
+    }
+  }
+
+#logo {
+    position: fixed;
+    width: 5%;
+    height: auto;
+    top: 0.5%;
+    right: 1.5%;
+    background: none;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 1px #52bed5;
+    animation: rotate 5s linear infinite;
+}
+#nav-name{
+   position: fixed;
+   margin: 0%;
+   left: 1.5%;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #4b4f50;
+    width: 100%;
+    height: 12%;
+    align-items: center;
+    font-size: 150%;
+    color: #fdf4ee;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    z-index: 1;
+
+}
+
+.a-nav {
+    background-color: #4b4f50;
+    color: #f9f4e2e9;
+    margin: 3%;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #eda0f0e9, rgb(75, 221, 157), rgb(210, 146, 44), #91e1f2); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: colorChange 6s linear infinite; 
+    background-size: 300% 100%; 
+}
+#timer-display{
+    padding-top: 8%;
+    background-image: linear-gradient(to right, rgb(225, 52, 184), rgb(75, 221, 157), rgb(210, 146, 44), rgb(50, 100, 200), rgb(150, 50, 100)); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: colorChange 8s linear infinite; 
+    background-size: 300% 100%; 
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+   
+   }
+#game-title{
+    display: flex; 
+    flex-direction: column;
+    font-size: 30px;
+    font-weight:bold;
+    color: #4b4f50;
+    padding-top: 5%;
+    margin-bottom: 0%;
+    padding: 10px;
+    width: 30%;
+    justify-content: center;
+    margin-left: 37%; 
+      
+   }
+
+#memory-card{
+    width:80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-column-gap: 3%;
+    grid-row-gap: 3%;
+    margin-left: 10%;
+    padding-bottom: 8%;
+    }
+        @keyframes blink {
+       80% {
+        opacity: 50%;
+        } 
+    }    
+    
+.card1{
+    width: 100%;
+    border: #4b4f50 4px solid;
+    animation:blink 400ms infinite;
+    animation-delay: 0.5s;
+    cursor: pointer;
+    }
+.card2{
+    width: 100%;
+    border: #4b4f50 4px solid;
+    animation:blink 400ms infinite;
+    cursor: pointer;
+    }
+.pair{
+    width: 100%;
+    border: #4b4f50 4px solid;
+    }
+
+.hidden {
+       display: none;
+     }
+     
+#custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4b4f50;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+     }
+     
+#custom-alert p {
+  font-size: 25px;
+  margin: 0 0 10px;
+  margin-bottom: 4%;
+  background-image: linear-gradient(to right, rgb(225, 52, 184), rgb(75, 221, 157), rgb(210, 146, 44), rgb(50, 100, 200), rgb(150, 50, 100)); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: colorChange 8s linear infinite;
+  font-style: italic;
+  white-space: pre-line;
+     }
+table{
+  border: #4b4f50 2px solid;
+     }
+     
+#gameHistory table {
+  width: 100%; 
+  border-collapse: collapse;
+  margin-top: 20px; 
+  color: #4b4f50;
+  }
+#gameHistory th, #gameHistory td {
+  border: 1px solid #f36175; 
+  padding: 8px; 
+  text-align: left; 
+  text-align: center;
+  }
+#gameHistory th {
+  background-color: #f36175; 
+  font-weight: bold;
+  text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    #timer-display{
+      padding-top: 15%;
+    }
+    #memory-card{
+      width: 90%;
+      margin-left: 5%;
+      padding-bottom: 5%;
+    }
+    #gameHistory table {
+      width: 80%;
+      margin-left: 10%;
+    }
+    #logo{
+      width: 8%;
+      top: 1%;
+    }
+  }
+  @media screen and (max-width: 480px) {
+
+    #timer-display{
+      padding-top: 20%;
+    }
+    #memory-card{
+      width: 100%;
+      padding-bottom: 5%;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      margin-left: 3%;
+      padding-top: 5%;
+
+    }
+   table{ 
+      width: 20%;
+    
+    
+    }
+    #logo{
+      width: 10%;
+      top: 2%;
+    }
+  }
+
+  
